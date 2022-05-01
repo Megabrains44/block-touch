@@ -153,6 +153,17 @@ let stopAnimate = true;
 let hasStarted = false;
 let status = "Play!";
 let score = 0;
+
+
+function addLocalStorage(){
+  const prevNumber = localStorage.getItem("highScore");
+  if (!prevNumber) localStorage.setItem("highScore", score);
+  else {
+    if (score > parseInt(prevNumber)){
+      localStorage.setItem("highScore", score);
+    }
+  }
+}
 function animate(){
   
   c.clearRect(0,0,canvas.width, canvas.height);
@@ -194,6 +205,8 @@ function animate(){
       if (checkLose()) {
         stopAnimate = true;
         status = "You lost!"
+        // localStorage
+        addLocalStorage()
         return;
       };
       score++;
@@ -209,6 +222,7 @@ function animate(){
         if (checkLose()) {
           stopAnimate = true; 
           status = "You lost!" 
+          addLocalStorage()
           return;
         };
         score++;
