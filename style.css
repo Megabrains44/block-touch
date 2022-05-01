@@ -82,13 +82,7 @@ body{
     justify-content: center;
     transition: visibility 100ms ease-out, opacity 100ms ease-out;
     
-    /* display: none; */
     
-}
-
-.bg-hide{
-    visibility: hidden;
-    opacity: 0;
 }
 
 
