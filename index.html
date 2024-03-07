@@ -6,12 +6,32 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <script defer src="script.js"></script>
+  <script defer type="module" src="script.js"></script>
   <script defer src="modal.js"></script>
 </head>
 
 <body>
-  <div class="main-frame">
+  <div class="menu">
+    <h1 class="menu-title">Pick which gamemode</h1>
+    <div class="menu-buttons">
+      <div class="btn-container big" id="gamemode-fill" >
+        <div class="btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/TriangleArrow-White-Right.svg/800px-TriangleArrow-White-Right.svg.png" />
+        </div>
+        <p class="btn-text">Fill</p>
+        
+      </div>
+      <div class="btn-container big" id="gamemode-points" >
+        <div class="btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/TriangleArrow-White-Right.svg/800px-TriangleArrow-White-Right.svg.png" />
+        </div>
+        <p class="btn-text">Points</p>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div class="main-frame" style="display: none;">
     
     <canvas id="canvas" width="500" height="700"></canvas>
     <div class="buttons">
