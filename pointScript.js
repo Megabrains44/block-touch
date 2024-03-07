@@ -18,7 +18,7 @@ class Piece{
   
 }
 
-const BASE_LIMITER = 10;
+const BASE_LIMITER = 20;
 
 let y = 0;
 let frames = 0;

@@ -22,7 +22,7 @@ class Piece{
 
 let y = 0;
 let frames = 0;
-const FRAME_LIMITER = 10;
+const FRAME_LIMITER = 15;
 const CELL_WIDTH = 50;
 const middle = Math.round(canvas.width / (2 * CELL_WIDTH)) - 1;
 
