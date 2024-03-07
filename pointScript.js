@@ -476,7 +476,16 @@ restartBtn.addEventListener("click", e => {
   FRAME_LIMITER = BASE_LIMITER;
   fake_FRAME_LIMITER = BASE_LIMITER;
 })
-
+window.addEventListener("keyup", e => {
+  if (e.code === "KeyR"){
+    status = "Play!"
+    addEmptyBlocks();
+    updatePlayer();
+    score = 0;
+    hasStarted = true;
+    stopAnimate = false;
+  }
+})
 
           
 

@@ -410,6 +410,17 @@ restartBtn.addEventListener("click", e => {
   stopAnimate = false;
 })
 
+window.addEventListener("keyup", e => {
+  if (e.code === "KeyR"){
+    status = "Play!"
+    addEmptyBlocks();
+    updatePlayer();
+    score = 0;
+    hasStarted = true;
+    stopAnimate = false;
+  }
+})
+
 function anim2(){
   c.clearRect(0,0,canvas.width, canvas.height);
   drawGrid()
