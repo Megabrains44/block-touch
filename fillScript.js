@@ -22,7 +22,7 @@ class Piece{
 
 let y = 0;
 let frames = 0;
-const FRAME_LIMITER = 20;
+const FRAME_LIMITER = 10;
 const CELL_WIDTH = 50;
 const middle = Math.round(canvas.width / (2 * CELL_WIDTH)) - 1;
 
@@ -334,7 +334,7 @@ function getMostBottomBlock(x,y, steps){
 
 window.addEventListener("keydown", e => {
   if (stopAnimate) return;
-  if (e.code == "ArrowRight"){
+  if (e.code == "ArrowRight" || e.code === "KeyD"){
     let isValidMove = true;
     
     if (playerCords.x + 1 == (canvas.width / CELL_WIDTH)){
@@ -356,7 +356,7 @@ window.addEventListener("keydown", e => {
     }
     
   }
-  else if (e.code == "ArrowLeft"){
+  else if (e.code == "ArrowLeft" || e.code === "KeyA"){
     let isValidMove = playerCords.x > 0;
     const leftBlocks = blocks
       .flat()
@@ -371,7 +371,7 @@ window.addEventListener("keydown", e => {
       playerCords.x--;
     }
   }
-  else if (e.code == "ArrowDown"){
+  else if (e.code == "ArrowDown"  || e.code === "KeyS"){
     console.log('arow down')
     const [i1, i2, steps] = getMostBottomBlock(playerCords.x, playerCords.y, 0);
     if (i2 > -1){
